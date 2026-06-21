@@ -12,7 +12,6 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/Common/ScrollToTop";
 import Loader from "./components/Loader/Loader";
 import MouseGlow from "./components/MouseGlow/MouseGlow";
-import ParticleBackground from "./components/ParticleBackground/ParticleBackground";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,7 +40,7 @@ function App() {
       {/* Bottom Glow */}
       <div className="fixed bottom-0 left-1/3 -z-10 h-[400px] w-[400px] rounded-full bg-blue-600/10 blur-3xl"></div>
 
-      <ParticleBackground />
+      
       <MouseGlow />
        
       {/* Main Content */}

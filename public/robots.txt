@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohsin-portfolio-7gicr4si5-mohsin-portfolio.vercel.app/sitemap.xml

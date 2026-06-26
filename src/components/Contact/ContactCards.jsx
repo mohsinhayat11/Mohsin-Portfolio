@@ -1,36 +1,49 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import axios from "axios";
 
 function ContactCards() {
-  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendMessage = async (e) => {
     e.preventDefault();
 
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    emailjs
-      .sendForm(
-        "service_kf71jin",
-        "template_1czvw6c",
-        form.current,
-        "d3j9OJeflMDPhM1S_"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setSuccess("Message sent successfully!");
-          form.current.reset();
-        },
-        () => {
-          setLoading(false);
-          setSuccess("Failed to send message.");
-        }
+      const response = await axios.post(
+        "https://mohsin-portfolio-backend-lud6.onrender.com/api/contact",
+        formData
       );
+
+      if (response.data.success) {
+        setSuccess("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      setSuccess("Failed to send message.");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -41,47 +54,47 @@ function ContactCards() {
       viewport={{ once: true }}
     >
       <form
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={sendMessage}
         className="space-y-6 rounded-3xl border border-gray-800 bg-gray-900 p-8 shadow-[0_0_30px_rgba(59,130,246,0.15)]"
       >
-        {/* Name */}
         <input
           type="text"
-          name="user_name"
+          name="name"
           placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none transition duration-300 focus:border-blue-500"
+          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none focus:border-blue-500"
         />
 
-        {/* Email */}
         <input
           type="email"
-          name="user_email"
+          name="email"
           placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none transition duration-300 focus:border-blue-500"
+          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none focus:border-blue-500"
         />
 
-        {/* Message */}
         <textarea
           rows="6"
           name="message"
           placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none transition duration-300 focus:border-blue-500"
-        ></textarea>
+          className="w-full rounded-2xl border border-gray-800 bg-black p-4 text-white outline-none focus:border-blue-500"
+        />
 
-        {/* Button */}
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-2xl bg-blue-500 px-6 py-4 font-semibold text-white transition duration-300 hover:bg-blue-600 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+          className="w-full rounded-2xl bg-blue-500 px-6 py-4 font-semibold text-white hover:bg-blue-600"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
 
-        {/* Success Message */}
         {success && (
           <p className="text-center text-green-400">
             {success}

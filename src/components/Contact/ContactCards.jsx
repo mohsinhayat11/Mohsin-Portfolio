@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import axios from "axios";
 
 function ContactCards() {
@@ -10,7 +11,6 @@ function ContactCards() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -31,7 +31,7 @@ function ContactCards() {
       );
 
       if (response.data.success) {
-        setSuccess("Message sent successfully!");
+        toast.success("Message sent successfully!");
 
         setFormData({
           name: "",
@@ -40,7 +40,7 @@ function ContactCards() {
         });
       }
     } catch (error) {
-      setSuccess("Failed to send message.");
+      toast.error("Failed to send message.");
     }
 
     setLoading(false);
@@ -94,12 +94,6 @@ function ContactCards() {
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
-
-        {success && (
-          <p className="text-center text-green-400">
-            {success}
-          </p>
-        )}
       </form>
     </motion.div>
   );

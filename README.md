@@ -151,12 +151,27 @@ VITE_API_URL=https://mohsin-portfolio-backend-lud6.onrender.com
 
 ## 📸 Screenshots
 
-You can add screenshots here later.
+### 🏠 Home Page
 
-- 🏠 Home Page
-- 💼 Projects Section
-- 📩 Contact Form
-- 🔐 Admin Dashboard
+![Home](screenshots/home.png)
+
+---
+
+### 💼 Projects Section
+
+![Projects](screenshots/projects.png)
+
+---
+
+### 📩 Contact Form
+
+![Contact](screenshots/contact.png)
+
+---
+
+### 🔐 Admin Dashboard
+
+![Dashboard](screenshots/dashboard.png)
 
 ---
 

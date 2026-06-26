@@ -84,4 +84,111 @@ https://mohsin-portfolio-backend-lud6.onrender.com
 - Render
 - MongoDB Atlas
 
+- ## 📂 Project Structure
+
+```text
+Mohsin-Portfolio
+│
+├── public
+├── src
+│   ├── assets
+│   ├── components
+│   ├── pages
+│   ├── services
+│   ├── App.jsx
+│   ├── Portfolio.jsx
+│   └── main.jsx
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mohsinhayat11/Mohsin-Portfolio.git
+```
+
+Go to the project directory:
+
+```bash
+cd Mohsin-Portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root and add:
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+For production:
+
+```env
+VITE_API_URL=https://mohsin-portfolio-backend-lud6.onrender.com
+```
+
+---
+
+## 📸 Screenshots
+
+You can add screenshots here later.
+
+- 🏠 Home Page
+- 💼 Projects Section
+- 📩 Contact Form
+- 🔐 Admin Dashboard
+
+---
+
+## 🚀 Future Improvements
+
+- Edit Messages
+- Export Messages (CSV)
+- Dashboard Analytics
+- Dark / Light Theme
+- Profile Management
+- Pagination
+- Reply to Messages
+
+---
+
+## 👨‍💻 Author
+
+**Mohsin Hayat**
+
+- GitHub: https://github.com/mohsinhayat11
+- Portfolio: https://mohsin-portfolio-three.vercel.app/
+
+---
+
+## ⭐ Support
+
+If you like this project, please consider giving it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
 ---

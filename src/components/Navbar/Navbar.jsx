@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../../constants/navLinks";
 import { FaBars, FaTimes } from "react-icons/fa";
+import resume from "../../assets/resume/Mohsin_Hayat_Resume.pdf";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +86,9 @@ function Navbar() {
 
         {/* Resume Button */}
         <a
-          href="#contact"
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-xl bg-white px-5 py-2 font-medium text-black shadow-md transition duration-300 hover:bg-gray-200 md:block"
         >
           Resume
@@ -121,8 +124,11 @@ function Navbar() {
               </li>
             ))}
 
+            {/* Mobile Resume Button */}
             <a
-              href="#contact"
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="rounded-xl bg-white px-4 py-3 text-center font-medium text-black transition duration-300 hover:bg-gray-200"
             >

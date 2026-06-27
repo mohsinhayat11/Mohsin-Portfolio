@@ -43,7 +43,9 @@ function FooterSocials() {
 
         {/* Email */}
         <a
-          href="mailto:mohsinmalak745@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=mohsinmalak745@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Mohsin,%0A%0AI%20visited%20your%20portfolio..."
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-2xl border border-gray-800 bg-gray-900 p-3 text-gray-400 transition duration-300 hover:border-red-500 hover:text-red-400 hover:shadow-[0_0_20px_rgba(248,113,113,0.4)]"
         >
           <FaEnvelope />

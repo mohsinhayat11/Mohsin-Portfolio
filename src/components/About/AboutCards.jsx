@@ -20,7 +20,7 @@ function AboutCards() {
         </p>
 
         <p className="text-gray-400">
-          COMSATS University Islamabad
+          COMSATS University Islamabad Attock Campus
         </p>
 
         <p className="text-gray-400">

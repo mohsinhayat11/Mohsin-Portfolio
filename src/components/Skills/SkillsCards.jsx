@@ -40,8 +40,8 @@ function SkillsCards() {
           <SkillBar name="HTML" percentage={95} />
           <SkillBar name="CSS" percentage={90} />
           <SkillBar name="JavaScript" percentage={85} />
-          <SkillBar name="React" percentage={80} />
-          <SkillBar name="Tailwind CSS" percentage={90} />
+          <SkillBar name="React" percentage={60} />
+          <SkillBar name="Tailwind CSS" percentage={65} />
         </div>
       </div>
 
@@ -52,8 +52,8 @@ function SkillsCards() {
         </h3>
 
         <div className="space-y-5">
-          <SkillBar name="Node.js" percentage={75} />
-          <SkillBar name="Express.js" percentage={70} />
+          <SkillBar name="Node.js" percentage={55} />
+          <SkillBar name="Express.js" percentage={45} />
         </div>
       </div>
 
@@ -64,9 +64,9 @@ function SkillsCards() {
         </h3>
 
         <div className="space-y-5">
-          <SkillBar name="Python" percentage={85} />
-          <SkillBar name="C++" percentage={75} />
-          <SkillBar name="Java" percentage={70} />
+          <SkillBar name="Python" percentage={80} />
+          <SkillBar name="C++" percentage={70} />
+          <SkillBar name="Java" percentage={65} />
         </div>
       </div>
 
@@ -77,8 +77,8 @@ function SkillsCards() {
         </h3>
 
         <div className="space-y-5">
-          <SkillBar name="MongoDB" percentage={75} />
-          <SkillBar name="MySQL" percentage={80} />
+          <SkillBar name="MongoDB" percentage={70} />
+          <SkillBar name="MySQL" percentage={75} />
         </div>
       </div>
     </motion.div>

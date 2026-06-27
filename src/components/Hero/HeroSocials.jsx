@@ -28,7 +28,9 @@ function HeroSocials() {
       </a>
 
       <a
-        href="mailto:mohsinmalak745@gmail.com"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=mohsinmalak745@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Mohsin,%0A%0AI%20visited%20your%20portfolio..."
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-2xl text-gray-400 transition duration-300 hover:text-red-400 hover:drop-shadow-[0_0_12px_#F87171]"
       >
         <FaEnvelope />
